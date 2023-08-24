@@ -11,10 +11,14 @@
 }
 header {
     background-color: #192a56;
-    padding: 16px 0;
+    padding-top: 16px;
     color: #fff;
 }
-
+header >.container{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 16px;
+}
 nav {
     background-color: #575fcf;
     padding: 16px 0;
@@ -30,4 +34,14 @@ nav li{
 nav li a {
     color: #fff;
     text-decoration: none;
+}
+.menu-hambruguer{
+    width: 32px;
+}
+.menu-hambruguer span{
+    height: 2px;
+    width: 100%;
+    background-color: #fff;
+    display: block;
+    margin-bottom: 4px;
 }
