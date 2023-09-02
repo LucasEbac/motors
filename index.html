@@ -66,34 +66,113 @@
         <div class="container">
             <h2>Em destaque</h2>
             <ul class="container-flex lista-veiculos">
-                <li>
+                <li class="item-central">
                     <img src="./images/carro-bmw.png" alt="">
                     <h3>Carro BMW</h3>
                     <P>
                     Cambio automatico, 4 portas
                     </P>
-                    <strong>R$ 75.000,00</strong>
+                    <div class="price">
+                        <strong>75.000,00</strong>
+                    </div>
                     <button type="button">Tenho interesse</button>
                 </li>
-                <li>
+                <li class="item-central">
                     <img src="./images/carro-bmw.png" alt="">
                     <h3>Carro BMW</h3>
                     <P>
                     Cambio automatico, 4 portas
                     </P>
-                    <strong>R$ 75.000,00</strong>
+                    <div class="price">
+                        <strong>75.000,00</strong>
+                    </div>
                     <button type="button">Tenho interesse</button>
                 </li>
-                <li>
+                <li class="item-central">
                     <img src="./images/carro-bmw.png" alt="">
                     <h3>Carro BMW</h3>
                     <P>
                     Cambio automatico, 4 portas
                     </P>
-                    <strong>R$ 75.000,00</strong>
+                    <div class="price">
+                        <strong>75.000,00</strong>
+                    </div>
                     <button type="button">Tenho interesse</button>
                 </li>
             </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Promoções</h2>
+            <ul class="container-flex lista-veiculos">
+                <li class="item-central">
+                    <img src="./images/carro-bmw.png" alt="">
+                    <h3>Carro BMW</h3>
+                    <P>
+                    Cambio automatico, 4 portas
+                    </P>
+                    <div class="price">
+                        <del>R$100.00,00</del>
+                        <strong>75.000,00</strong>
+                    </div>
+                    <button type="button">Tenho interesse</button>
+                </li>
+                <li class="item-central">
+                    <img src="./images/carro-bmw.png" alt="">
+                    <h3>Carro BMW</h3>
+                    <P>
+                    Cambio automatico, 4 portas
+                    </P>
+                    <div class="price">
+                        <del>R$100.00,00</del>
+                        <strong>75.000,00</strong>
+                    </div>
+                    <button type="button">Tenho interesse</button>
+                </li>
+                <li class="item-central">
+                    <img src="./images/carro-bmw.png" alt="">
+                    <h3>Carro BMW</h3>
+                    <P>
+                    Cambio automatico, 4 portas
+                    </P>
+                    <div class="price">
+                        <del>R$100.00,00</del>
+                        <strong>75.000,00</strong>
+                    </div>
+                    <button type="button">Tenho interesse</button>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <form>
+            <div>
+            <label for="nome"> Nome:</label>
+            <input type="text" id="nome">
+            </div>
+            <div>
+                <label for="Telefone"> Telefone:</label>
+                <input type="tel" id="Telefone">
+                </div>
+                <div>
+                    <label for="e-mail"> E-mail:</label>
+                    <input type="email" id="e-mail">
+                    </div>
+                    <div>
+                        <label for="Veiculo-interesse"> Veiculo de interesse:</label>
+                        <input type="text" id="Veiculo-interesse">
+                        </div>
+                        <div>
+                            <label for="Mensagem"> Mensagem:</label>
+                            <textarea id="Mensagem"></textarea>
+                            </div>
+                            <button type="submit">Enviar</button>
+            </form>
         </div>
     </section>
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -101,7 +180,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script>
     $(document).ready(function() {
-        $('#carrosel-imagem').slick()({
+        $('#carrosel-imagem').click()({
         autoplay:true
     });
     })
