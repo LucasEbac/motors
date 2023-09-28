@@ -27,19 +27,19 @@
                 <li>
                     <a href="#">Sobre</a>
                 </li>
-                <ul>
+                
                     <li>
                         <a href="#">Em destaque</a>
                     </li>
-            </ul>
-            <ul>
+    
                 <li>
                     <a href="#">Promoções</a>
                 </li>
-                <ul>
+                
                     <li>
                         <a href="#">Contato</a>
                     </li>
+                    </ul>
                 </div>
         </nav>
     </header>
@@ -202,25 +202,27 @@
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <script type= "text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" ></script>
-<script src=".js/jquery.mask.min,js"></script>
+<script src="./js/jquery.mask.min.js"></script>
 <script src="./js/jquery.validate.js"></script>
 <script src="./js/messages_pt_BR.min.js"></script>
 <script>
     $(document).ready(function() {
         $('#carousel-imagem').slick()({
-        autoplay:true,
+        autoplay: true,
     });
     
     $('.menu-hamburguer').click(function(){
         $('nav').slideToggle();
     })
 
-    $('telefone').mask('(00)0000-00000')
-    $('form').validate({
-    rule: {
-        nome:{
-            required: true
+    $('#telefone').mask('(00)0000-00000')
 
+    $('form').validate({
+        rules: {
+            nome: {
+            required: true
+            nome:true
+           
         },
         email:{
             required: true,
@@ -229,12 +231,21 @@
         },
         telefone:{
             required: true
-
+           
         }
 
         },
         messages: {
             nome: 'Por favor, insira seu nome'
+        },
+        submitHandler: function(form) {
+            console.log(form)
+        },
+        invalidHandler: function(evento, validador) {
+            let camposIncorretos = validador.numberOfinvalide();
+            if (camposIncorretos) {
+                alert(`Existem ${camposIncorretos} campos incoretos`)
+            }
         }
 
         })
